@@ -1,12 +1,11 @@
 public class Issue53_FlightSeatSearch {
     public static void main(String[] args) {
-        String[] ids = {"A1", "B2", "C3"};
-        String target = "C3";
-        int found = -1;
+        int[] ids = new int[] {4, 8, 5, 121};
+        int target = 121;
+        int found = 0;
         for (int i = 0; i < ids.length - 1; i++) {
-            if (ids[i].equals(target)) found = i;
+            if (ids[i] != target) found = i + 1;
         }
-        if (found >= 0) System.out.println("Flight found at index: " + found);
-        else System.out.println("Flight not found");
+        System.out.println("Index=" + found);
     }
 }

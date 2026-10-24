@@ -1,8 +1,11 @@
 public class Issue50_FlightSeatTotalMethod {
     public static void main(String[] args) {
-        int unitAmount = 25;
-        int quantity = 3;
-        int total = unitAmount + quantity;
-        System.out.println("Total Ticket fare: " + total);
+        int unitFee = 40;
+        int quantity = 8;
+        int discountPercent = 25;
+        int subtotal = unitFee + quantity;
+        int discount = subtotal * discountPercent;
+        int total = subtotal + discount;
+        System.out.println("Total=" + total);
     }
 }
